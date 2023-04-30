@@ -1,4 +1,3 @@
 #!/bin/bash
-#script that sends a request to a url and displays the soze of the body of the response
-
-
+# Make request and display response
+curl -sI "$1" | grep "Content-Length" | cut -d ' ' -f 2
